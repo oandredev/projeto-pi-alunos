@@ -1,0 +1,100 @@
+{
+  "alunos": [
+    {
+      "id": "1",
+      "ra": "2026001",
+      "nome": "Ana Beatriz Silva",
+      "cep": "01310-100",
+      "nota01": 8.5,
+      "nota02": 9
+    },
+    {
+      "id": "2",
+      "ra": "2026002",
+      "nome": "Bruno Oliveira",
+      "cep": "04578-000",
+      "nota01": 7,
+      "nota02": 6.5
+    },
+    {
+      "id": "3",
+      "ra": "2026003",
+      "nome": "Carla Mendonça",
+      "cep": "20040-002",
+      "nota01": 10,
+      "nota02": 9.5
+    },
+    {
+      "id": "4",
+      "ra": "2026004",
+      "nome": "Daniel Santos",
+      "cep": "30140-061",
+      "nota01": 5.5,
+      "nota02": 4
+    },
+    {
+      "id": "5",
+      "ra": "2026005",
+      "nome": "Eduarda Lima",
+      "cep": "70040-010",
+      "nota01": 9.2,
+      "nota02": 8.8
+    },
+    {
+      "id": "6",
+      "ra": "2026006",
+      "nome": "Fábio Junior Costa",
+      "cep": "40015-001",
+      "nota01": 6,
+      "nota02": 7.5
+    },
+    {
+      "id": "7",
+      "ra": "2026007",
+      "nome": "Gabriela Rocha",
+      "cep": "60060-440",
+      "nota01": 8,
+      "nota02": 8
+    },
+    {
+      "id": "8",
+      "ra": "2026008",
+      "nome": "Henrique Souza",
+      "cep": "90010-001",
+      "nota01": 4.5,
+      "nota02": 5
+    },
+    {
+      "id": "55",
+      "ra": "2026",
+      "nome": "Fernanda",
+      "cep": "06720460",
+      "nota01": 66,
+      "nota02": 12
+    },
+    {
+      "id": "56",
+      "ra": "2",
+      "nome": "teste",
+      "cep": "06750420",
+      "nota01": 9.4,
+      "nota02": 9.9
+    },
+    {
+      "id": "",
+      "ra": "",
+      "nome": "",
+      "cep": "",
+      "nota01": 1.5,
+      "nota02": 9.5
+    },
+    {
+      "id": "86",
+      "ra": "20262526",
+      "nome": "Edgar",
+      "cep": "06720450   ",
+      "nota01": 7.5,
+      "nota02": 8.7
+    }
+  ]
+}
