@@ -29,7 +29,30 @@ export class Cadastrar {
   ) { }
 
  submeter() {
-    // 1. O "Filtro": Só deixa passar se as notas forem válidas
+
+// 1. Fiz para criar a validação 
+  const apenasNumeros = /^[0-9]+$/; // Só aceita de 0 a 9
+  const nomeValido = /^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ ]+$/;// Aceita apenas letras e espaços, do começo ao fim do texto
+
+  // 2. Validação: Nome não pode ser só espaço e deve conter letras
+  // O .trim() remove espaços nas pontas e o test verifica se tem letras
+  if (!this.aluno.nome.trim() || !nomeValido.test(this.aluno.nome)) {
+    alert('Atenção! O nome do aluno é inválido ou está em branco.');
+    return;
+  }
+
+  // 3. Validação: RA deve conter APENAS números
+  if (!apenasNumeros.test(this.aluno.ra)) {
+    alert('Atenção! O RA deve conter apenas números.');
+    return;
+  }
+  // 4. Validação do CEP (Exatamente 8 dígitos)
+ if (this.aluno.cep.length !== 8 || !apenasNumeros.test(this.aluno.cep)) {
+  alert('O CEP deve conter exatamente 8 números.');
+  return;
+}
+
+  // 5. O "Filtro": Só deixa passar se as notas forem válidas - aqui coloquei a regra de negócio
     if (this.aluno.nota01 < 0 || this.aluno.nota01 > 10 || 
         this.aluno.nota02 < 0 || this.aluno.nota02 > 10) {
       
@@ -37,7 +60,7 @@ export class Cadastrar {
       return; // para a execução aqui mesmo
     }
 
-    // 2. O "Envio": Só acontece se o código não parou no 'return' acima
+  // 5.2 (continuei). O "Envio": Só acontece se o código não parou no 'return' acima
     this.alunosService.incluir(this.aluno).subscribe({
       next: () => {
         alert('Aluno cadastrado com sucesso!');
@@ -45,7 +68,7 @@ export class Cadastrar {
       },
       error: (err) => {
         console.error('Erro ao cadastrar:', err);
-        alert('Erro ao salvar o aluno. Verifique a conexão.'); // tenho que testar esse erro
+        alert('Erro ao salvar o aluno.'); // se eu desconectar o banco, dá esse erro 
       }
     });
   }
