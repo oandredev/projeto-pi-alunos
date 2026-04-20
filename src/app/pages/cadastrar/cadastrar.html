@@ -19,6 +19,7 @@
     name="input-ra"
     placeholder="Digite o RA do aluno"
     type="text"
+    placeholder="Insira apenas números"
     [(ngModel)]="aluno.ra"
     (keyup.enter)="campoNome.focus()"
   />
@@ -43,6 +44,7 @@
     name="input-cep"
     placeholder="00000-000"
     type="text"
+    maxlength="8"
     [(ngModel)]="aluno.cep"
     (keyup.enter)="campoNota01.focus()"
   />

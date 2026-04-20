@@ -2,19 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Aluno } from '../../core/types/types';
 import { AlunosService } from '../../core/services/alunos';
 import { CommonModule } from '@angular/common'; // Importante para o @for funcionar
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listagem',
-  standalone: true, // Certifique-se que é standalone
-  imports: [CommonModule], // Adicionado para dar suporte às diretivas do Angular
+  standalone: true, 
+  imports: [CommonModule, RouterModule], 
   templateUrl: './listagem.html',
   styleUrl: './listagem.css',
 })
 export class Listagem implements OnInit {
   listaAlunos: Aluno[] = [];
-
-  // Mudei o nome aqui de 'service' para 'alunosService' para bater com o código abaixo
-  constructor(private alunosService: AlunosService) {}
+  
+   constructor(private alunosService: AlunosService) {}
 
   ngOnInit(): void {
     // Agora usando o nome correto: alunosService
@@ -34,12 +34,12 @@ export class Listagem implements OnInit {
           this.ngOnInit(); // Recarrega a lista
         },
         error: (err: any) => {
-          alert("Erro ao excluir o aluno.");
+          alert("Erro ao excluir o aluno."); // esse erro aqui só acontece se eu desconectar o banco, por exemplo.
           console.error(err);
         }
       });
     } else {
-      console.log("Exclusão cancelada pelo usuário.");
+      console.log("Exclusão cancelada pelo usuário."); // aqui aparece só no console.log, informando a tentativa do usuário
     }
   }
 }

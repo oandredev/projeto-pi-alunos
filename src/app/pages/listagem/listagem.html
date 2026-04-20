@@ -21,8 +21,8 @@
         <td>{{ aluno.nota01 }}</td>
         <td>{{ aluno.nota02 }}</td>
         <td>
-          <button class="btn-editar">Editar</button>
-          <button class="btn-excluir" (click)="excluir(aluno.id)">Excluir</button>
+          <button class="btn-editar" [routerLink]="['/alterar', aluno.id]">Editar</button><!--aqui ele diz: saia destapágina e vá pra alterar-->
+          <button class="btn-excluir" (click)="excluir(aluno.id)">Excluir</button> <!--aqui eledispara a função--> 
         </td>
       </tr>
       }
