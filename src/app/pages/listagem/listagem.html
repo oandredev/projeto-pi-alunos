@@ -1,0 +1,31 @@
+<div class="content-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Código (ID)</th>
+        <th>RA</th>
+        <th>Nome</th>
+        <th>CEP</th>
+        <th>Nota 1</th>
+        <th>Nota 2</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (aluno of listaAlunos; track aluno.id){
+      <tr>
+        <td>{{ aluno.id }}</td>
+        <td>{{ aluno.ra }}</td>
+        <td>{{ aluno.nome }}</td>
+        <td>{{ aluno.cep }}</td>
+        <td>{{ aluno.nota01 }}</td>
+        <td>{{ aluno.nota02 }}</td>
+        <td>
+          <button class="btn-editar">Editar</button>
+          <button class="btn-excluir" (click)="excluir(aluno.id)">Excluir</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
