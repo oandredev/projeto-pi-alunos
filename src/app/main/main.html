@@ -1,9 +1,33 @@
-<main>
+<div class="home-container">
+  <header class="hero">
+    <h1>🎓 Sistema de Gestão de Alunos</h1>
+    <p>Gerencie cadastros, atualizações e controle completo dos alunos.</p>
+  </header>
 
-<h1>Página Principal
+  <div class="dashboard-grid">
+    <div class="dash-card" routerLink="/consultar">
+      <div class="icon">📋</div>
+      <h3>Alunos</h3>
+      <p>Visualize, edite e acompanhe os alunos cadastrados.</p>
+      <span class="btn-link">Acessar Painel</span>
+    </div>
 
-<br>
+    <div class="dash-card" routerLink="/cadastrar">
+      <div class="icon">➕</div>
+      <h3>Novo Aluno</h3>
+      <p>Adicione um novo aluno ao sistema.</p>
+      <span class="btn-link">Cadastrar</span>
+    </div>
 
-Bem-vindo à página principal do sistema!</h1>
+    <div class="dash-card special" routerLink="/listagem">
+      <div class="icon">📊</div>
+      <h3>Listagem</h3>
+      <p>Veja todos os alunos de forma organizada.</p>
+      <span class="btn-link">Visualizar</span>
+    </div>
+  </div>
 
-</main>
+  <footer class="stats-footer">
+    <p>Status do Sistema: <span class="status-online">● Online</span></p>
+  </footer>
+</div>

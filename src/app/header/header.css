@@ -1,134 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Shadows+Into+Light+Two&display=swap');
-
-
-body {
-
-font-family: "Fredericka the Great", cursive;
-
-font-style: normal;
-
-background: #f8f8f8;
-
+header {
+  background-color: #1a472a;
+  padding: 0 15rem;
 }
 
-
-.cabecalho-principal{
-
-background: #2d8659;
-
-color: #fff;
-
-padding: 10px 0px;
-
-text-align: center;
-
+.logo {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 1rem;
+  text-decoration: none;
 }
 
-.titulo-app {
-
-font-family: "Fredericka the Great", cursive;
-
-font-size: 2.5em;
-
-margin: 0;
-
+.logo h1 {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-.menu {
-
-background: #444;
-
-padding: 10px 0px;
-
-justify-content: center; /* Alinha os itens para o centro */
-
-gap: 10px; /* Espaço entre os links */
-
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-
-/* A lista que contém os links */
-
-.menu ul {
-
-list-style-type: none; /* tira as bolinhas */
-
-padding: 5px 0px;
-
-display: flex;
-
-justify-content: center; /* Alinha os itens para o centro */
-
-gap: 30px; /* Espaço entre os links */
-
+.logo img {
+  height: 3rem;
 }
 
-
-/* O link <a> é o nosso "botão" principal */
-
-.menu a {
-
-color: white;
-
-font-family: "Fredericka the Great", cursive;
-
-font-size: 1.2em;
-
-text-decoration: none;
-
-padding: 8px 50px;
-
-border-radius: 5px;
-
-transition: all 0.3s ease; /* Suaviza animação */
-
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
 }
 
-
-/* EFEITO 1: Mudar a cor de fundo ao passar o mouse */
-
-.menu a:hover {
-
-background: #2d8659; /* Cor de fundo ao passar o mouse */
-
-transform: translateY(-3px); /* Elevação */
-
-box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra para efeito 3D */ }
-
-
-/* EFEITO 2: Destaque para o link da página ATIVA */
-
-/* Adicione routerLinkActive="active" no seu HTML para funcionar */
-
-.menu a.active {
-
-background-color: #1abc9c; /* Cor de fundo de destaque */
-
-color: #2c3e50; /* Cor do texto escura para contrastar */
-
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-/* EFEITO 3 (Opcional): Linha que "cresce" sob o link ao passar o mouse */
+.nav-links a:hover {
+  color: #f1c40f;
+}
 
-.menu a::after {
-
-content: '';
-
-position: absolute;
-
-bottom: 0;
-
-left: 50%;
-
-width: 0;
-
-height: 3px;
-
-background-color: #1abc9c;
-
-transition: all 0.3s ease-in-out;
-
-transform: translateX(-50%);
-
+.active {
+  border-bottom: 2px solid #f1c40f;
+  padding-bottom: 5px;
 }

@@ -1,13 +1,93 @@
-main{
+.home-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-display: flex;
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #1a472a 0%, #2a633d 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
-text-align: center;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
-justify-content: center;
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
 
-min-height: 825px;
+.dash-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-align-items: center;
+.dash-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #1a472a;
+}
 
+.dash-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.dash-card h3 {
+  color: #1a472a;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.dash-card p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.btn-link {
+  color: #1a472a;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.dash-card:hover .btn-link {
+  border-bottom-color: #1a472a;
+}
+
+.special {
+  background-color: #f0f7f2;
+}
+
+.stats-footer {
+  margin-top: 4rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+  color: #888;
+}
+
+.status-online {
+  color: #27ae60;
+  font-weight: bold;
 }

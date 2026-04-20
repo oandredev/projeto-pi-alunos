@@ -1,31 +1,49 @@
-<div class="content-container">
-  <table>
-    <thead>
-      <tr>
-        <th>Código (ID)</th>
-        <th>RA</th>
-        <th>Nome</th>
-        <th>CEP</th>
-        <th>Nota 1</th>
-        <th>Nota 2</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (aluno of listaAlunos; track aluno.id){
-      <tr>
-        <td>{{ aluno.id }}</td>
-        <td>{{ aluno.ra }}</td>
-        <td>{{ aluno.nome }}</td>
-        <td>{{ aluno.cep }}</td>
-        <td>{{ aluno.nota01 }}</td>
-        <td>{{ aluno.nota02 }}</td>
-        <td>
-          <button class="btn-editar" [routerLink]="['/alterar', aluno.id]">Editar</button><!--aqui ele diz: saia destapágina e vá pra alterar-->
-          <button class="btn-excluir" (click)="excluir(aluno.id)">Excluir</button> <!--aqui eledispara a função--> 
-        </td>
-      </tr>
-      }
-    </tbody>
-  </table>
+<div class="container">
+  <div class="card">
+    <div class="header-lista">
+      <h2>Lista de Alunos</h2>
+      <button class="btn-novo" routerLink="/cadastrar"><span>+</span> Novo Aluno</button>
+    </div>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>RA</th>
+            <th>Nome</th>
+            <th>CEP</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th class="acoes-header">Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (aluno of listaAlunos; track aluno.id) {
+            <tr>
+              <td>{{ aluno.id }}</td>
+              <td>{{ aluno.ra }}</td>
+              <td class="nome-aluno">{{ aluno.nome }}</td>
+              <td>{{ aluno.cep }}</td>
+              <td>{{ aluno.nota01 }}</td>
+              <td>{{ aluno.nota02 }}</td>
+              <td class="acoes-buttons">
+                <button class="btn-icon edit" [routerLink]="['/alterar', aluno.id]" title="Editar">
+                  ✏️
+                </button>
+                <button class="btn-icon delete" (click)="excluir(aluno.id)" title="Excluir">
+                  🗑️
+                </button>
+              </td>
+            </tr>
+          }
+
+          <tr *ngIf="semDados">
+            <td colspan="7" class="fallback">Nenhum aluno cadastrado.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
