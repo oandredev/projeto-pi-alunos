@@ -1,1 +1,48 @@
-<p>alterar works!</p>
+<main class="container-alterar">
+    <div class="card-formulario">
+        <h2>Editar Aluno</h2>
+
+        <form #formAlterar="ngForm" (ngSubmit)="salvar()">
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" class="input-simples" id="nome" name="nome" [(ngModel)]="aluno.nome"
+                    placeholder="Apenas letras" (input)="validarSomenteLetras()" (keyup.enter)="campoRa.focus()"
+                    required>
+            </div>
+
+            <div class="campo-duplo">
+                <div class="campo">
+                    <label for="ra">RA:</label>
+                    <input #campoRa type="text" class="input-simples" id="ra" name="ra" [(ngModel)]="aluno.ra"
+                        (input)="validarSomenteNumeros('ra')" (keyup.enter)="campoCep.focus()" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cep">CEP:</label>
+                    <input #campoCep type="text" class="input-simples" id="cep" name="cep" [(ngModel)]="aluno.cep"
+                        maxlength="8" (input)="validarSomenteNumeros('cep')" (keyup.enter)="campoNota01.focus()"
+                        required>
+                </div>
+            </div>
+
+            <div class="campo-duplo">
+                <div class="campo">
+                    <label for="nota01">Nota 01:</label>
+                    <input #campoNota01 type="number" class="input-simples" id="nota01" name="nota01"
+                        [(ngModel)]="aluno.nota01" min="0" max="10" step="0.1" (keyup.enter)="campoNota02.focus()">
+                </div>
+
+                <div class="campo">
+                    <label for="nota02">Nota 02:</label>
+                    <input #campoNota02 type="number" class="input-simples" id="nota02" name="nota02"
+                        [(ngModel)]="aluno.nota02" min="0" max="10" step="0.1" (keyup.enter)="salvar()">
+                </div>
+            </div>
+
+            <div class="botoes">
+                <button type="submit" class="input-submeter">Salvar Alterações</button>
+                <button type="button" class="btn-cancelar" routerLink="/listagem">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</main>
