@@ -1,0 +1,83 @@
+<form>
+  <label for="input-id">Código</label><br />
+  <input
+    #campoId
+    class="input-simples"
+    id="input-id"
+    name="input-id"
+    placeholder="Digite o código (ID)"
+    type="text"
+    [(ngModel)]="aluno.id"
+    (keyup.enter)="campoRa.focus()"
+  />
+
+  <label for="input-ra">RA</label><br />
+  <input
+    #campoRa
+    class="input-simples"
+    id="input-ra"
+    name="input-ra"
+    placeholder="Digite o RA do aluno"
+    type="text"
+    [(ngModel)]="aluno.ra"
+    (keyup.enter)="campoNome.focus()"
+  />
+
+  <label for="input-nome">Nome do aluno</label><br />
+  <input
+    #campoNome
+    class="input-simples"
+    id="input-nome"
+    name="input-nome"
+    placeholder="Digite o nome completo"
+    type="text"
+    [(ngModel)]="aluno.nome"
+    (keyup.enter)="campoCep.focus()"
+  />
+
+  <label for="input-cep">CEP</label><br />
+  <input
+    #campoCep
+    class="input-simples"
+    id="input-cep"
+    name="input-cep"
+    placeholder="00000-000"
+    type="text"
+    [(ngModel)]="aluno.cep"
+    (keyup.enter)="campoNota01.focus()"
+  />
+
+  <label for="input-nota01">Nota 01</label><br />
+  <input
+    #campoNota01
+    class="input-simples"
+    id="input-nota01"
+    name="input-nota01"
+    placeholder="0.0 a 10.0"
+    type="number"
+    min="0" 
+    max="10"
+    step="0.5"
+    [(ngModel)]="aluno.nota01"
+    (keyup.enter)="campoNota02.focus()"
+  />
+
+  <label for="input-nota02">Nota 02</label><br />
+  <input
+    #campoNota02
+    class="input-simples"
+    id="input-nota02"
+    name="input-nota02"
+    placeholder="0.0 a 10.0"
+    type="number"
+    min="0" 
+    max="10" 
+    step="0.1"
+    [(ngModel)]="aluno.nota02"
+    (keyup.enter)="submeter()" 
+  />
+
+  <button type="button" class="input-submeter" (click)="submeter()">
+    Cadastrar Aluno
+  </button>
+</form>

@@ -1,0 +1,13 @@
+main{
+
+display: flex;
+
+text-align: center;
+
+justify-content: center;
+
+min-height: 825px;
+
+align-items: center;
+
+}
