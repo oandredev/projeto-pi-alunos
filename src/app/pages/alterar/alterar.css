@@ -1,0 +1,92 @@
+/* Centraliza o container principal na tela */
+.container-alterar {
+    display: flex;
+    flex-direction: column;
+    /* Faz o título e o card ficarem um abaixo do outro */
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+/* CENTRALIZAÇÃO DOS TÍTULOS */
+h2 {
+    text-align: center;
+    /* Alinha o texto no meio */
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+    /* Garante que ele use o espaço todo para calcular o centro */
+}
+
+/* O "card" que segura o formulário */
+.card-formulario {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo dos campos lado a lado */
+.campo-duplo {
+    display: flex;
+    gap: 15px;
+}
+
+.campo-duplo .campo {
+    flex: 1;
+}
+
+.campo label {
+    display: block;
+    text-align: center;
+    /* Centraliza o texto do título */
+    width: 100%;
+    /* Garante que ele ocupe toda a largura para achar o centro */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-simples {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    /* Fundamental para o preenchimento não quebrar o layout */
+}
+
+/* Botão Salvar */
+.input-submeter {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #2d8659;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Botão Cancelar */
+.btn-cancelar {
+    width: 100%;
+    display: block;
+    /* Faz o botão ocupar a linha toda */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    /* Centraliza o texto "Cancelar" dentro do botão */
+    text-decoration: none;
+    /* Remove sublinhado de link se houver */
+}

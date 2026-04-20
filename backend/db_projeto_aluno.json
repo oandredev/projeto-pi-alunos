@@ -1,14 +1,6 @@
 {
   "alunos": [
     {
-      "id": "2",
-      "ra": "2026002",
-      "nome": "Bruno Oliveira",
-      "cep": "04578-000",
-      "nota01": 7,
-      "nota02": 6.5
-    },
-    {
       "id": "3",
       "ra": "2026003",
       "nome": "Carla Mendonça",
@@ -61,8 +53,8 @@
       "ra": "2026",
       "nome": "Fernanda",
       "cep": "06720460",
-      "nota01": 66,
-      "nota02": 12
+      "nota01": 7.5,
+      "nota02": 9.9
     },
     {
       "id": "859",
