@@ -6,40 +6,49 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listagem',
-  standalone: true, 
-  imports: [CommonModule, RouterModule], 
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './listagem.html',
   styleUrl: './listagem.css',
 })
 export class Listagem implements OnInit {
   listaAlunos: Aluno[] = [];
-  
-   constructor(private alunosService: AlunosService) {}
+  semDados = false;
+
+  constructor(private alunosService: AlunosService) {}
 
   ngOnInit(): void {
-    // Agora usando o nome correto: alunosService
-    this.alunosService.listar().subscribe((alunos) => {
-      this.listaAlunos = alunos;
+    this.alunosService.listar().subscribe({
+      next: (alunos) => {
+        this.listaAlunos = alunos ?? [];
+        this.semDados = this.listaAlunos.length === 0;
+      },
+      error: () => {
+        this.listaAlunos = [];
+        this.semDados = true;
+      },
     });
   }
 
   // Esse método serve para excluir um aluno da lista e atualizar a tela automaticamente
   excluir(id: string) {
-    const confirmacao = confirm("Tem certeza que deseja excluir este aluno? Esta ação não pode ser desfeita.");
+    const confirmacao = confirm(
+      'Tem certeza que deseja excluir este aluno? Esta ação não pode ser desfeita.',
+    );
 
     if (confirmacao) {
       this.alunosService.excluir(id).subscribe({
         next: () => {
-          alert("Aluno excluído com sucesso!");
+          alert('Aluno excluído com sucesso!');
           this.ngOnInit(); // Recarrega a lista
         },
         error: (err: any) => {
-          alert("Erro ao excluir o aluno."); // esse erro aqui só acontece se eu desconectar o banco, por exemplo.
+          alert('Erro ao excluir o aluno.'); // esse erro aqui só acontece se eu desconectar o banco, por exemplo.
           console.error(err);
-        }
+        },
       });
     } else {
-      console.log("Exclusão cancelada pelo usuário."); // aqui aparece só no console.log, informando a tentativa do usuário
+      console.log('Exclusão cancelada pelo usuário.'); // aqui aparece só no console.log, informando a tentativa do usuário
     }
   }
 }
