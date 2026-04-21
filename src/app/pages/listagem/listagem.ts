@@ -13,7 +13,6 @@ import { RouterModule } from '@angular/router';
 })
 export class Listagem implements OnInit {
   listaAlunos: Aluno[] = [];
-  semDados = false;
 
   constructor(private alunosService: AlunosService) {}
 
@@ -21,11 +20,9 @@ export class Listagem implements OnInit {
     this.alunosService.listar().subscribe({
       next: (alunos) => {
         this.listaAlunos = alunos ?? [];
-        this.semDados = this.listaAlunos.length === 0;
       },
       error: () => {
         this.listaAlunos = [];
-        this.semDados = true;
       },
     });
   }

@@ -29,19 +29,17 @@
               <td>{{ aluno.nota01 }}</td>
               <td>{{ aluno.nota02 }}</td>
               <td class="acoes-buttons">
-                <button class="btn-icon edit" [routerLink]="['/alterar', aluno.id]" title="Editar">
-                  ✏️
-                </button>
-                <button class="btn-icon delete" (click)="excluir(aluno.id)" title="Excluir">
-                  🗑️
-                </button>
+                <button class="btn-icon edit" [routerLink]="['/alterar', aluno.id]">✏️</button>
+                <button class="btn-icon delete" (click)="excluir(aluno.id)">🗑️</button>
               </td>
             </tr>
           }
 
-          <tr *ngIf="semDados">
-            <td colspan="7" class="fallback">Nenhum aluno cadastrado.</td>
-          </tr>
+          @if (listaAlunos.length === 0) {
+            <tr>
+              <td colspan="7" class="fallback">Nenhum aluno cadastrado.</td>
+            </tr>
+          }
         </tbody>
       </table>
     </div>

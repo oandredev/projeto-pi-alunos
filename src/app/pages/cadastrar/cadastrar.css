@@ -1,110 +1,84 @@
-/* Estilo geral do formulário */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 2.5rem;
+  background-color: #f0f2f0;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 form {
-
-max-width: 500px;
-
-margin: 40px auto;
-
-padding: 20px;
-
-background-color: #f9f9f9;
-
-border: 1px solid #ddd;
-
-border-radius: 8px;
-
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  border-top: 6px solid #1a472a;
 }
 
-
-/* Estilo dos rótulos */
-
-form label {
-
-display: block;
-
-margin-top: 15px;
-
-margin-bottom: 5px;
-
-font-weight: bold;
-
-color: #333;
-
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #1a472a;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
-
-
-/* Estilo dos inputs */
 
 .input-simples {
-
-width: 100%;
-
-padding: 10px 12px;
-
-font-size: 16px;
-
-margin-bottom: 10px;
-
-border: 1px solid #ccc;
-
-border-radius: 6px;
-
-box-sizing: border-box;
-
-transition: border-color 0.3s;
-
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  outline: none;
+  background: #fff;
 }
-
-
-/* Efeito ao focar no input */
 
 .input-simples:focus {
-
-border-color: #007bff;
-
-outline: none;
-
+  border-color: #1a472a;
+  box-shadow: 0 0 0 2px rgba(26, 71, 42, 0.15);
 }
 
+.input-simples::placeholder {
+  color: #aaa;
+}
 
-/* Estilo do botão de submit */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
 
 .input-submeter {
-
-width: 100%;
-
-padding: 12px;
-
-margin-top: 20px;
-
-background-color: #2d8659; /* verde sucesso */
-
-color: white;
-
-font-size: 16px;
-
-font-weight: bold;
-
-border: none;
-
-border-radius: 6px;
-
-cursor: pointer;
-
-transition: background-color 0.3s;
-
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #1a472a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:
+    transform 0.2s,
+    background 0.3s;
 }
-
-
-/* Efeito ao passar o mouse sobre o botão */
 
 .input-submeter:hover {
-
-background-color: #444;
-
+  background-color: #2a633d;
+  transform: translateY(-2px);
 }
 
-
+.input-submeter:active {
+  transform: scale(0.98);
+}
