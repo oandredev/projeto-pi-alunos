@@ -7,7 +7,7 @@
       id="input-id"
       name="input-id"
       placeholder="Digite o código (ID)"
-      type="text"
+      type="number"
       [(ngModel)]="aluno.id"
       (keyup.enter)="campoRa.focus()"
     />
@@ -19,7 +19,7 @@
       id="input-ra"
       name="input-ra"
       placeholder="Digite o RA do aluno"
-      type="text"
+      type="number"
       placeholder="Insira apenas números"
       [(ngModel)]="aluno.ra"
       (keyup.enter)="campoNome.focus()"

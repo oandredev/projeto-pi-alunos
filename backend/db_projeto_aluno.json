@@ -1,52 +1,28 @@
 {
   "alunos": [
     {
-      "id": "4",
-      "ra": "2026004",
-      "nome": "Daniel Santos",
-      "cep": "00000000",
-      "nota01": 5.5,
-      "nota02": 4
+      "id": "1",
+      "ra": "12345678",
+      "nome": "André Rodrigues",
+      "cep": "12345678",
+      "nota01": 9,
+      "nota02": 8.5
     },
     {
-      "id": "5",
-      "ra": "2026005",
-      "nome": "Eduarda Lima",
-      "cep": "70040-010",
-      "nota01": 9.2,
+      "id": "2",
+      "ra": "123456790",
+      "nome": "Fernanda Souza",
+      "cep": "43211234",
+      "nota01": 9,
       "nota02": 8.8
     },
     {
-      "id": "6",
-      "ra": "2026006",
-      "nome": "Fábio Junior Costa",
-      "cep": "40015-001",
-      "nota01": 6,
-      "nota02": 7.5
-    },
-    {
-      "id": "7",
-      "ra": "2026007",
-      "nome": "Gabriela Rocha",
-      "cep": "60060-440",
-      "nota01": 8,
-      "nota02": 8
-    },
-    {
-      "id": "8",
-      "ra": "2026008",
-      "nome": "Henrique Souza",
-      "cep": "90010-001",
-      "nota01": 4.5,
-      "nota02": 5
-    },
-    {
-      "id": "859",
-      "ra": "20261520",
-      "nome": "André Rodrigues",
-      "cep": "04677040",
-      "nota01": 10,
-      "nota02": 10
+      "id": "3",
+      "ra": "123456791",
+      "nome": "André Coutinho",
+      "cep": "12213232",
+      "nota01": 8.3,
+      "nota02": 9
     }
   ]
 }
