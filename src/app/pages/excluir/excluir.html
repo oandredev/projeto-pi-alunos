@@ -1,1 +1,23 @@
-<p>excluir works!</p>
+<main class="container-excluir">
+    <div class="card-formulario-excluir">
+        <h2>Excluir Aluno</h2>
+
+        <p style="text-align: center; color: #666; font-size: 14px;">
+            Insira o ID para remover o registro do sistema.
+        </p>
+
+        <div class="campo">
+            <label for="idExcluir">Código (ID):</label>
+            <input type="text" class="input-simples" id="idExcluir" [(ngModel)]="idParaExcluir"
+                (input)="validarSomenteNumeros()" placeholder="Ex: 2">
+        </div>
+
+        <button class="btn-excluir-acao" (click)="confirmarExclusao()">
+            Excluir Registro
+        </button>
+
+        <button class="btn-voltar" routerLink="/listagem">
+            Voltar para Lista
+        </button>
+    </div>
+</main>

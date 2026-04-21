@@ -1,14 +1,6 @@
 {
   "alunos": [
     {
-      "id": "3",
-      "ra": "2026003",
-      "nome": "Carla Mendonça",
-      "cep": "20040-002",
-      "nota01": 10,
-      "nota02": 9.5
-    },
-    {
       "id": "4",
       "ra": "2026004",
       "nome": "Daniel Santos",
