@@ -1,1 +1,32 @@
-<p>consultar works!</p>
+<main class="container-excluir"> <div class="card-formulario-excluir">
+    <h2>Consultar Aluno</h2>
+    
+    <div class="campo">
+      <label>Código (ID):</label>
+      <input 
+        type="text" 
+        class="input-simples" 
+        [(ngModel)]="idBusca" 
+        (input)="validarSomenteNumeros()"
+        placeholder="Digite o ID e pressione Pesquisar"
+      >
+    </div>
+
+    <button class="btn-pesquisar" (click)="pesquisar()">
+      Pesquisar Aluno
+    </button>
+
+    <div class="resultado-consulta" *ngIf="aluno">
+      <hr>
+      <p><strong>Nome:</strong> {{ aluno.nome }}</p>
+      <p><strong>RA:</strong> {{ aluno.ra }}</p>
+      <p><strong>CEP:</strong> {{ aluno.cep }}</p>
+      <p><strong>Nota 01:</strong> {{ aluno.nota01 }}</p>
+      <p><strong>Nota 02:</strong> {{ aluno.nota02 }}</p>
+    </div>
+
+    <button class="btn-voltar" routerLink="/listagem" style="margin-top: 15px;">
+      Voltar para Lista
+    </button>
+  </div>
+</main>

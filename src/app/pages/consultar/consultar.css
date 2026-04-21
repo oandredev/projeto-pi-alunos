@@ -1,0 +1,69 @@
+/* Reutilizando as bases que você já aprovou */
+.container-excluir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.card-formulario-excluir {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.input-simples {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-pesquisar {
+    width: 100%;
+    background-color: #28a745; /* Verde para busca/sucesso */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-pesquisar:hover {
+    background-color: #218838;
+}
+
+.resultado-consulta {
+    margin-top: 20px;
+    text-align: left; /* Dados alinhados à esquerda para leitura */
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #28a745;
+}
+
+.btn-voltar {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #e2e6ea;
+}
