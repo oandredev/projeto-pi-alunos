@@ -1,93 +1,92 @@
 .container-excluir {
-    display: flex;
-    justify-content: center;
-    /* Centraliza na horizontal */
-    align-items: center;
-    /* Centraliza na vertical */
-    min-height: 80vh;
-    /* Altura mínima para o centro aparecer bem */
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
 }
 
 /* O "Card" do formulário */
 .card-formulario-excluir {
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 450px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  border-top: 6px solid #c9302c;
 }
-
 
 .card-formulario-excluir h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-
 .campo label {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #444;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #444;
 }
 
 /* O campo de input */
 .input-simples {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 16px;
-    text-align: center;
-    /*Aqui eu centralizo o ID na caixa*/
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  /*Aqui eu centralizo o ID na caixa*/
 }
 
-
 .btn-excluir-acao {
-    width: 100%;
-    background-color: #d96f6c;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    transition: background 0.2s;
+  width: 100%;
+  background-color: #d96f6c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
 .btn-excluir-acao:hover {
-    background-color: #c9302c;
+  background-color: #c9302c;
+  transform: translateY(-2px);
 }
 
 /* Botão de Voltar/Cancelar */
 .btn-voltar {
-    width: 100%;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    display: block;
-    text-decoration: none;
+  width: 100%;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
 .btn-voltar:hover {
-    background-color: #e2e6ea;
-    /* Cinza um pouco mais nítido */
-    border-color: #868c92;
-    /* Escurece a borda também */
-    color: #000;
-    /* Deixa o texto mais preto */
+  background-color: #e2e6ea;
+  border-color: #868c92;
+  color: #000;
+  transform: translateY(-2px);
 }
